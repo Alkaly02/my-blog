@@ -2,6 +2,7 @@ const body = document.body;
 const header = document.querySelector('#header');
 const themeToggleBtn = document.querySelector('#theme-toggle-btn');
 const logo = document.querySelector('.logo');
+const allImages = document.querySelectorAll('img');
 
 const currentTheme = localStorage.getItem('currentTheme');
 
@@ -31,3 +32,10 @@ window.addEventListener('scroll', () => {
 		header.classList.remove('activated');
 	}
 })
+
+if(allImages){
+	allImages.forEach( image => {
+		image.setAttribute('loading', 'lazy');
+		console.log(image);
+	})
+}

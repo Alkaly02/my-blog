@@ -8,6 +8,9 @@
 	<link rel="icon" type="image/x-icon" href="../assets/images/img-rond.png">
 	<title>MAB - Comment connaître l'ordre de priorité en css</title>
 	<link rel="stylesheet" href="../assets/style.css">
+
+	<!-- prefetch -->
+	<link rel="prefetch" as="script" href="../assets/index.js" />
 	<script src="../assets/index.js" defer></script>
 
 	<!-- Fonts -->
@@ -68,10 +71,10 @@
 
 		<article class="article">
 			<h1 class="article__title">Comment connaître l'ordre de priorité en css et gérer les conflits entre sélecteurs ?</h1>
-			<section class="article__img">
+			<div class="article__img">
 				<img src="../assets/images/css.png" alt="" class="article__img--fluid">
-			</section>
-			<section class="article__text">
+			</div>
+			<div class="article__text">
 				<p>
 					Il y a plusieurs façon de cibler un élément en CSS. On peut utiliser :
 				</p>
@@ -106,7 +109,7 @@
 					<code>head</code> ne veut pas forcément dire que ce sont ces styles qui seront prioritaires par rapport à ceux écrits dans le fichier externe. <br>
 					Voyons voir de quoi cela dépend. 
 				</p>
-			</section>
+			</div>
 
 			<section class="article__text">
 				<h3>Cas d’un même sélecteur</h3>
