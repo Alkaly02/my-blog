@@ -148,12 +148,12 @@ body.dark-theme{
 .card-img{
 	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px 0px, rgba(0, 0, 0, 0.6) 0px 2px 6px 2px;
 	border-radius: 10px;
-	transition: border-radius 0.25s, margin-top .5s ease-in-out;
+	transition: border-radius 0.25s, transform .5s ease-in-out;
 }
 
 
 .card:hover .card-img{
-	margin-top: -2.8rem;
+	transform: scale(1.1, 1.2);
 	border-radius: 20px;
 }
 
