@@ -302,6 +302,8 @@ p > span{
 .article__img--fluid{
 	max-width: 100%;
 	margin: 1rem 0 4rem 0;
+	border-radius: 10px;
+	box-shadow: 0px 0px 8px #bbb;
 }
 
 .article__text{
