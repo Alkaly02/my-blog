@@ -246,10 +246,18 @@ p > span{
 
 .header--right i{
 	color: #bbb;
-	transition: color 0.3s ease-in;
+	transition: color 0.25s ease-in;
 }
 
-.header--right i:hover{
+.twitter:hover{
+	color: #1DA1F2;
+}
+
+.linkedin:hover{
+	color: #0E76A8;
+}
+
+.github:hover{
 	color: var(--secondary-color);
 }
 
