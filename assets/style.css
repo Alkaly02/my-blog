@@ -289,7 +289,7 @@ p > span{
 }
 
 .article__title{
-	font-size: 4rem;
+	font-size: 4.5rem;
 	font-weight: 800;
 	letter-spacing: 1px;
 }
@@ -316,7 +316,7 @@ p > span{
 .article ul, ol{
 	padding: 0.5rem 2rem 3rem 2rem;
 	font-family: Roboto, sans-serif;
-	line-height: 4rem;
+	line-height: 3.5rem;
 }
 
 .article i{

@@ -55,7 +55,7 @@
 								<a href="../index.html">Moussa Alkaly BADJI</a>
 							</h3>
 							<p>
-								<span class="publish-date date">22 Mars</span>
+								<span class="publish-date date">27 Mars 2022</span>
 								<span class="dot"></span> 
 								<span class="read-time"> 5 min de lecture</span>
 							</p>
@@ -85,31 +85,25 @@
 				<p>
 					Il y a plusieurs façon de cibler un élément en CSS. On peut utiliser :
 				</p>
-
 				<ul>
-					<li>L'élément lui même, par exemple <code>p { color: red }</code></li>
+					<li>L'élément lui même, par exemple <code>p{color:red}</code></li>
 					<li>L'attribut <code>id</code></li>
 					<li>L'attribut <code>class</code></li>
 					<li>etc</li>
 				</ul>
-
 				<p>
 					On peut aussi placer notre code CSS sur trois différents endroits : 
 				</p>
-
 				<ol type="1">
 					<li>Dans l'élément lui même avec l’attribut <code>style</code></li>
 					<li>Placer l'élément <code>style</code> dans l'élément <code>head</code></li>
 					<li>Écrire le CSS dans un fichier externe puis l’inclure dans le HTML en utilisant la balise <code>link</code>.</li>
 				</ol>
-
 				<h3>Quel est l’ordre de priorité dans ce cas?</h3>
-
 				<p>
-					Vous avez sûrement entendu dire que c’est toujours le style le plus proche de l'élément qui sera appliqué. Ce qui veut dire que c’est le style qui est dans l'attribut <code>style</code> est prioritaire, ensuite celui qui est dans le <code>head</code> avec la balise <code>style</code> et enfin celui qui se trouve dans le fichier externe.<br> 
+					Vous avez sûrement entendu dire que c’est toujours le style le plus proche de l'élément qui sera appliqué. Ce qui veut dire que c’est le style qui est dans l'attribut <code>style</code> qui est prioritaire, ensuite celui qui est dans le <code>head</code> avec la balise <code>style</code> et enfin celui qui se trouve dans le fichier externe.<br> 
 					Mais est-ce toujours le cas?  
 				</p>
-
 				<p>
 					Noter que cette théorie n’est valable que pour l’attribut <code>style</code> qui se trouve dans l'élément lui-même. Quel que soit le sélecteur utilisé ou bien l’endroit dans lequel vous écrivez vos styles CSS, l’attribut <code>style</code> est toujours prioritaire.
 					Cependant, tel n’est pas le cas pour les deux autres cas restants. Le fait d'écrire vos styles dans le 
@@ -120,49 +114,53 @@
 
 			<section class="article__text">
 				<h3>Cas d’un même sélecteur</h3>
-
 				<p>
 					Quel sera le background-color du paragraphe selon vous?
 				</p>
-
 				<img src="../assets/images/img1.png" alt="Code" class="article__img--fluid">
-
 				<p>Voici le résultat</p>
-
 				<img src="../assets/images/img1-1.png" alt="Resultat sur le navigateur" class="article__img--fluid">
-
 				<p>
 					Quel sera le background-color pour celui ci encore ?
 				</p>
-
 				<img src="../assets/images/img2.png" alt="Code" class="article__img--fluid">
-
 				<p>Voici le résultat</p>
-
 				<img src="../assets/images/img2-1.png" alt="Resultat sur le navigateur" class="article__img--fluid">
-
 				<p>Mais… Comment est-ce possible ?</p>
 			</section>
 
 			<section class="article__text">
-				<h3>Explication : </h3>
-
+				<h3>Explication</h3>
 				<p>
 					Retournez sur le premier code et regarder comment on a placé la balise <code>style</code> par rapport à la balise <code>link</code>. Faites le pour le deuxième aussi. <br>
 					Qu’avez vous remarqué ?
 				</p>
-
 				<p>
 					Et bien on constate que quand <code>style</code> est au dessus de <code>link</code>, c’est le style qui est dans le fichier externe qui est appliqué. Alors que quand on place <code>link</code> au dessus de <code>style</code>, c’est le style qui est dans <code>style</code> qui est appliqué. <br>
 					Mais pourquoi?
 				</p>
-
 				<p>
 					L’explication est assez simple, c’est parce que tout simplement le navigateur lie notre code de haut en bas, ce qui veut dire que c’est toujours le style qui est lu en dernier qui sera appliqué, même si vous écrivez le style dans un même fichier . <br>
 					Pour le premier cas, le fichier externe est lu en dernier. Et pour le deuxième cas, c'est la balise <code>style</code> qui est lu en dernier. <br> 
 					Je précise qu’on est dans le cas d’un même sélecteur.
 
 				</p>	
+			</section>
+
+			<section class="article__text">
+				<h3>Cas de sélecteurs différents  ( id, class, element )</h3>
+				<p>
+					Dans ce cas, le principe est un peu différent car le style de l'élément ne va pas dépendre de l’ordre de positionnement de <code>style</code> ou de <code>link</code>. Cela va dépendre du sélecteur utilisé. <code>id</code> est le plus précis, suivi de <code>class</code> et enfin l'élément lui-même, quel que soit l’ordre dans lequel vous écrivez les styles.
+				</p>
+				<p>Voici un petit aperçu :</p>
+				<img src="../assets/images/img3.png" alt="Resultat sur le navigateur" class="article__img--fluid">
+				<p>On se rend compte que le background-color est au orange alors que c’est <code>p</code> qui est lu en dernier. Donc c’est l’<code>id</code> qui est le plus précis !</p>
+			</section>
+
+			<section class="article__text">
+				<h3>Tips</h3>
+				<p>Basez-vous sur ces explications et essayez par vous même de changer l’ordre des sélecteurs, écrivez sur différents endroits puis constatez, analysez et enfin concluez ! <br>
+				C’est la meilleure manière d’apprendre ! </p>
 			</section>
 		</article>
 	</main>
