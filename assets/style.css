@@ -277,6 +277,10 @@ p > span{
 		flex-direction: column;
 		gap: 1rem;
 	}
+
+	.fullname{
+		text-align: center;
+	}
 }
 
 /* Article */
