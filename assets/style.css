@@ -201,6 +201,11 @@ body.dark-theme{
 	align-items: center;
 }
 
+.about-me p{
+	line-height: unset;
+	padding: 0;
+}
+
 .about-img{
 	min-width: 60px;
 	width: 10%;
